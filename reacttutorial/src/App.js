@@ -7,9 +7,12 @@ import './App.css';
 function App() {
   return (
     <Provider store={store}>
-    <div className="App">
+    {/* <div className="App">
       <BookContainer/>
-    </div>
+    </div> */}
+    <React.Fragment>
+      <BookContainer/>
+    </React.Fragment>
     </Provider>
   );
 }
