@@ -8,9 +8,9 @@ function Employee(){
     const [age,setAge]=useState("20");
 
     const clickHandler= ()=>{
-      setName("RJ");
-      setEmpid("E10");
-      setAge("30");
+      setName(name);
+      setEmpid(empid);
+      setAge(age-1);
     }
 
 
