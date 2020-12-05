@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
 function Employee(){
@@ -13,7 +13,12 @@ function Employee(){
       setAge(age-1);
     }
 
+    const clickHandler1= ()=>{
+        setName(name);
+        setEmpid(empid + 1);
+      }
 
+  useEffect(()=>{console.log("UseEffect Rendering")},[age]);
     return(
     <>
     <h1>Employee Details</h1>
@@ -22,6 +27,7 @@ function Employee(){
     <h1>Your age : {age}</h1>
 
     <button onClick={clickHandler}>Click me</button>
+    <button onClick={clickHandler1}>Click me</button>
     </>
     );
 }
