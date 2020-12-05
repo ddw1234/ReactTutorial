@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Regularcomp from './regularcomp';
-import Purecomp from './Purecomp';
+import MemoComp from './memo'; 
 // ReactDOM.render(<App />, document.getElementById('root'));
 
 class Parentcomp extends Component{
@@ -33,8 +32,7 @@ this.setState({
 
                 <div>
                     <h1>Parent Component Name : {this.state.name}</h1>
-                    <Regularcomp name={this.state.name} />
-                    <Purecomp name={this.state.name} />
+                    <MemoComp name={this.state.name} />
                 </div>
             );
         }
