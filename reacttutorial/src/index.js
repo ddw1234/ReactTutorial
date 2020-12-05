@@ -1,45 +1,32 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-import MemoComp from './memo'; 
-// ReactDOM.render(<App />, document.getElementById('root'));
 
-class Parentcomp extends Component{
+function Employee(){
 
-    constructor(props){
+    const [name,setName]=useState("Dinesh");
+    const [empid,setEmpid]=useState("emp01");
+    const [age,setAge]=useState("20");
 
-        super();
-        this.state={
-            name:"dinesh"
-        }
+    const clickHandler= ()=>{
+      setName("RJ");
+      setEmpid("E10");
+      setAge("30");
     }
 
-    componentDidMount(){
 
-        setInterval(()=>{
-this.setState({
+    return(
+    <>
+    <h1>Employee Details</h1>
+    <h1>Your name : {name}</h1>
+    <h1>Your empid : {empid}</h1>
+    <h1>Your age : {age}</h1>
 
-    name: "Tutorial website for learn"
-            })},2000)
-    }
-
-        render(){
-
-            console.log("Parent component Render")
-            return(
-
-                <div>
-                    <h1>Parent Component Name : {this.state.name}</h1>
-                    <MemoComp name={this.state.name} />
-                </div>
-            );
-        }
-    }
-
-ReactDOM.render(<Parentcomp/>,document.getElementById("root"));
+    <button onClick={clickHandler}>Click me</button>
+    </>
+    );
+}
+ReactDOM.render(<Employee/>,document.getElementById("root"));
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+//serviceWorker.unregister();
