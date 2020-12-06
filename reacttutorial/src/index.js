@@ -1,21 +1,10 @@
-import React from 'react';
+import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
-import BootForm from './form';
-
-class NameForm extends React.Component{
- 
-  render(){
-    return(
-     <>
-     <div className="container">
-     <h1>Welcome to the website</h1>
-     <BootForm/>
-     </div>
-     </>
-    );
-  }
-
-}
+import Employee from './liftingstate/Employee';
+import Department from './liftingstate/department';
+import Salary from  './liftingstate/salary';
 
 
-ReactDOM.render(<NameForm/>,document.getElementById("root"));
+
+
+ReactDOM.render(<Employee />,document.getElementById("root"));
