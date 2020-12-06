@@ -1,20 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import useCustomHook from './custom';
 
-function Employee(){
-  const data=useCustomHook();
+function Reactact(){
 
-  return(
-    <>
-    <h1>Employee Details</h1>
-    <h1>User salary is {data.salary}</h1>
-    <button onClick={data.incrementsalary}>Increment Salary</button>
-    </>
-  )
+  const arr=[1,2,3,4,5];
+  const newarr=arr.map((val,index)=>{
+    // return val;
+    // map() function is used to iterate through array and list 
+    return <li key={index}>{val+1}</li>;
+  });
 
+  console.log(arr);
+ return(
+   <>
+   <h1>Hello</h1>
+   <ul>{newarr}</ul>
+   </>
+ )
+  
 }
-ReactDOM.render(<Employee/>,document.getElementById("root"));
+
+ReactDOM.render(<Reactact/>,document.getElementById("root"));
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
