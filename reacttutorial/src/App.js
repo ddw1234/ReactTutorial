@@ -1,20 +1,37 @@
-import React from 'react';
-import {Provider} from 'react-redux';
-import BookContainer from './components/bookContainer'
-import store from './redux/store';
+import React, { Component } from 'react';
 import './App.css';
+import Employee from './liftingstate/Employee';
+import {Provider} from './context';
 
-function App() {
-  return (
-    <Provider store={store}>
-    {/* <div className="App">
-      <BookContainer/>
-    </div> */}
-    <React.Fragment>
-      <BookContainer/>
-    </React.Fragment>
-    </Provider>
-  );
+
+class App extends Component{
+
+  state={
+    name:"Dinesh",
+    department:"Science",
+    salary:500
+
+  }
+
+changehandler=()=>{
+  this.setState({salary:this.state.salary*50});
+}
+
+  render(){
+
+    const data={
+      salary:this.state.salary,
+      clickChange:this.changehandler
+    }
+    return(
+      <>
+      <h1>App Component</h1>
+      <Provider value={data}>
+        <Employee/>
+      </Provider>
+      </>
+    );
+  }
 }
 
 export default App;

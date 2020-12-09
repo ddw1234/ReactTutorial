@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import Salary from './salary';
 
 class Department extends Component{
 
@@ -6,9 +7,7 @@ class Department extends Component{
         return(
             <>
             <h1>Department Details</h1>
-            <h2>Employee Name : {this.props.name} </h2>
-            <h2>Working days : {this.props.workingdays} </h2>
-            <h2>Working hours: {this.props.workinghours} </h2>
+            <Salary/>
             </>
         )
     }
