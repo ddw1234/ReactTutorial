@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import BJP from './bjp';
-import AAP from './aap';
+import Employee from './Employee';
+import Widget from './Widget';
+import logo from "./MyImage.jpg";
+import ErrorBoundary from './errorBoundary';
 
 class App extends Component{  
 
@@ -8,9 +10,13 @@ class App extends Component{
    
     return(
       <>
-      <h1>Higher Order Component</h1> 
-      <BJP Candidate="Manoj"/>  
-      <AAP Candidate="Arvind"/>  
+      <h1>Error Boundaries</h1> 
+      <ErrorBoundary>
+      <Employee/>
+      </ErrorBoundary>
+      <ErrorBoundary>
+      <Widget profileimage=""/>   
+      </ErrorBoundary> 
       </>
     );
   }
