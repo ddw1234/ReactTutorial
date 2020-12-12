@@ -16,3 +16,5 @@ npm start
 6. To import React-bootstrap use below command
 npm install react-bootstrap bootstrap
 
+7. To use routing in your code use below command 
+npm install --save react-router-dom
