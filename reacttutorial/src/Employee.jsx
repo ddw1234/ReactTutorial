@@ -1,14 +1,16 @@
-import React, { Component } from 'react';
+import React , { Component } from 'react';
 
 class Employee extends Component{
+
+    UNSAFE_componentWillMount(){
+        console.log("Employee Component Console");
+    }
 
     render(){
 
         return(
             <>
-            <h1>Employee Details</h1>
-            <h2>Name : Pradeep</h2>
-            <h2>Profile : Web Developer</h2>
+            <h1>Employee Component</h1>
             </>
 
         );
